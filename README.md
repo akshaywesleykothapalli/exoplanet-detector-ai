@@ -1,77 +1,72 @@
-# 🌌 Exoplanet Detector AI
+# Exoplanet Detection AI
 
-An AI-powered web application that predicts whether a celestial object is an **exoplanet** using machine learning techniques and astronomical data.
+An AI-powered web application that predicts the existence of exoplanets using machine learning and visualizes transit light curves interactively.
 
-This project combines **data science, machine learning, and web development** to demonstrate how AI can assist in space research and astronomical discovery.
+Built with **Flask**, **Scikit-learn**, and a modern **HTML/CSS/JavaScript** frontend.
 
 ---
 
 ## 🚀 Project Overview
 
-Exoplanets are planets that exist outside our solar system. Detecting them traditionally requires complex astronomical analysis.  
-This project simplifies that process by using a **Machine Learning model** trained on real exoplanet data to classify whether an observed object is likely an exoplanet.
+Exoplanets are planets that orbit stars outside our solar system.  
+This project uses a **Random Forest classifier** trained on astronomical parameters to determine whether a given exoplanet candidate is likely to be real.
 
 The application provides:
-- A user-friendly web interface
-- A trained **Random Forest classifier**
-- Real-time predictions based on input parameters
+- Intelligent predictions
+- Confidence scores
+- Animated transit light curve visualization
+- Feature importance explainability
+- A modern, interactive UI
+
+---
+
+## ✨ Key Features
+
+- 🔭 **AI-based Exoplanet Classification**
+- 📈 **Animated Transit Light Curve Visualization**
+- 🧠 **Explainable AI (Feature Importance Panel)**
+- 🎨 **Modern UI with Smooth Animations**
+- ⚡ **Fast Flask Backend**
+- 🧪 **Pre-trained Machine Learning Model**
+- 🔄 **Reset & Re-analyze Workflow**
 
 ---
 
 ## 🧠 Machine Learning Model
 
-- **Algorithm:** Random Forest Classifier  
-- **Preprocessing:**
-  - Missing value handling using imputation
-  - Feature scaling
-- **Model Files:**
-  - `random_forest_model.pkl`
-  - `scaler.pkl`
-  - `imputer.pkl`
-
-The model is trained using astronomical features from the dataset to accurately predict exoplanet candidates.
-
----
-
-## 🛠️ Tech Stack
-
-### Backend
-- Python
-- Flask
-- Scikit-learn
-- Pandas
-- NumPy
-
-### Frontend
-- HTML
-- CSS
-- JavaScript
-
-### Tools
-- Git & GitHub
-- VS Code
-- macOS Terminal
+- Algorithm: **Random Forest Classifier**
+- Dataset: NASA Exoplanet Dataset
+- Features Used:
+  - Orbital Period
+  - Planet Radius
+  - Transit Depth
+  - Transit Duration
+  - Orbital Eccentricity
+- Accuracy: **~94% on test data**
 
 ---
 
-## 📁 Project Structure
+## 🗂️ Project Structure
 
-ExoplanetDetector/
-├── app.py
-├── train_model.py
-├── exoplanets.csv
-├── requirements.txt
-├── README.md
+exoplanet-detector-ai/
+│
 ├── model/
 │ ├── random_forest_model.pkl
 │ ├── scaler.pkl
 │ └── imputer.pkl
-├── templates/
-│ └── index.html
+│
 ├── static/
 │ ├── style.css
-│ └── scripts.js
-└── .gitignore
+│ └── script.js
+│
+├── templates/
+│ └── index.html
+│
+├── train_model.py
+├── app.py
+├── requirements.txt
+├── .gitignore
+└── README.md
 
 
 ---
@@ -82,58 +77,54 @@ ExoplanetDetector/
 ```bash
 git clone https://github.com/akshaywesleykothapalli/exoplanet-detector-ai.git
 cd exoplanet-detector-ai
-2️⃣ Create and activate virtual environment (optional but recommended)
-bash
-Copy code
+2️⃣ Create and activate a virtual environment (recommended)
 python3 -m venv venv
 source venv/bin/activate
 3️⃣ Install dependencies
-bash
-Copy code
 pip install -r requirements.txt
-4️⃣ Run the Flask application
-bash
-Copy code
-python app.py
-5️⃣ Open in browser
-cpp
-Copy code
+4️⃣ (Optional) Train the machine learning model
+python3 train_model.py
+⚠️ If you skip this step, the pre-trained model included in the repository will be used.
+
+5️⃣ Run the Flask application
+python3 app.py
+6️⃣ Open in your browser
 http://127.0.0.1:5000/
-📊 Dataset
-The dataset (exoplanets.csv) contains astronomical parameters used for classification.
-Features are preprocessed before being fed into the ML model.
+🧪 Sample Input Values (For Testing)
+You can use these values to quickly test the model:
 
-🎯 Features
-Predicts exoplanet existence using AI
-
-Simple and interactive UI
-
-Pre-trained ML model included
-
-Clean and modular project structure
+Feature	Value
+Orbital Period	365.25
+Planet Radius	1.0
+Transit Depth	0.01
+Transit Duration	13.0
+Eccentricity	0.017
+📊 Explainability (Why This Prediction?)
+The model displays a feature importance panel showing which parameters influenced the prediction the most, helping users understand why a planet was classified as confirmed or not.
 
 🔮 Future Enhancements
-Improve model accuracy with deep learning
+🌍 Add habitability score prediction
 
-Add data visualization and charts
+📉 Support real NASA light curve uploads
 
-Deploy application to cloud (Render / Railway)
+🤖 Upgrade to deep learning models
 
-Add API support
+☁️ Deploy to cloud (Render / AWS / Vercel)
 
-Support real-time astronomical datasets
+📱 Mobile responsiveness improvements
 
 👨‍💻 Author
 Akshay Wesley Kothapalli
-GitHub: https://github.com/akshaywesleykothapalli
+ML & Full-Stack Developer
+
+🔗 GitHub: https://github.com/akshaywesleykothapalli
+🔗 LinkedIn: https://www.linkedin.com/in/akshay-wesley-kothapalli-966738378
 
 📜 License
-This project is created for educational and academic purposes.
+This project is licensed under the MIT License.
+Feel free to use, modify, and distribute.
 
-⭐ Acknowledgements
-NASA Exoplanet Archive (dataset inspiration)
+⭐ If you found this project interesting, consider starring the repository!
 
-Scikit-learn documentation
 
-Flask documentation
-
+---
