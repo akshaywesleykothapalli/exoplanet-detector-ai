@@ -1,4 +1,6 @@
+
 # Exoplanet Detection AI
+
 
 An AI-powered web application that predicts the existence of exoplanets using machine learning and visualizes transit light curves interactively.
 
@@ -48,6 +50,7 @@ The application provides:
 
 ## 🗂️ Project Structure
 
+
 exoplanet-detector-ai/
 │
 ├── model/
@@ -67,6 +70,23 @@ exoplanet-detector-ai/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+
+### Backend
+- Python
+- Flask
+- Scikit-learn
+- Pandas
+- NumPy
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+
+### Tools
+- Git & GitHub
+- VS Code
+- macOS Terminal
 
 
 ---
