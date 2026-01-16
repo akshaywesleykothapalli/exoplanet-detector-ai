@@ -1,4 +1,4 @@
-# 🌌 Exoplanet Detector AI
+#  Exoplanet Detector AI
 
 An AI-powered web application that predicts whether a celestial object is an **exoplanet** using machine learning techniques and astronomical data.
 
@@ -56,22 +56,22 @@ The model is trained using astronomical features from the dataset to accurately 
 
 ## 📁 Project Structure
 
-ExoplanetDetector/
-├── app.py
-├── train_model.py
-├── exoplanets.csv
-├── requirements.txt
-├── README.md
-├── model/
-│ ├── random_forest_model.pkl
-│ ├── scaler.pkl
-│ └── imputer.pkl
-├── templates/
-│ └── index.html
-├── static/
-│ ├── style.css
-│ └── scripts.js
-└── .gitignore
+- `app.py` — Flask backend
+- `train_model.py` — Model training script
+- `requirements.txt` — Dependencies
+- `exoplanets.csv` — Dataset
+
+- `model/`
+  - `random_forest_model.pkl`
+  - `scaler.pkl`
+  - `imputer.pkl`
+
+- `templates/`
+  - `index.html`
+
+- `static/`
+  - `style.css`
+  - `script.js`
 
 
 ---
